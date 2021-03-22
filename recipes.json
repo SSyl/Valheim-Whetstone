@@ -3,7 +3,7 @@
     {
       "name": "Recipe_RepairKitBronze",
       "item": "RepairKitBronze",
-      "amount": 5,
+      "amount": 4,
       "craftingStation": "forge",
       "requirements": [
         {
@@ -16,14 +16,14 @@
         },
         {
           "item": "RoundLog",
-          "amount": 3
+          "amount": 5
         }
       ]
     },
     {
       "name": "Recipe_RepairKitIron",
       "item": "RepairKitIron",
-      "amount": 5,
+      "amount": 4,
       "craftingStation": "forge",
       "requirements": [
         {
@@ -36,14 +36,14 @@
         },
         {
           "item": "ElderBark",
-          "amount": 2
+          "amount": 3
         }
       ]
     },
     {
       "name": "Recipe_RepairKitSilver",
       "item": "RepairKitSilver",
-      "amount": 5,
+      "amount": 4,
       "craftingStation": "forge",
       "requirements": [
         {
@@ -56,14 +56,14 @@
         },
         {
           "item": "Obsidian",
-          "amount": 5
+          "amount": 10
         }
       ]
     },
     {
       "name": "Recipe_RepairKitBlackMetal",
       "item": "RepairKitBlackMetal",
-      "amount": 5,
+      "amount": 4,
       "craftingStation": "forge",
       "requirements": [
         {
@@ -80,7 +80,7 @@
         },
         {
           "item": "SurtlingCore",
-          "amount": 2
+          "amount": 3
         }
       ]
     },
