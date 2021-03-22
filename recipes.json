@@ -1,0 +1,112 @@
+{
+  "recipes": [
+    {
+      "name": "Recipe_RepairKitBronze",
+      "item": "RepairKitBronze",
+      "amount": 5,
+      "craftingStation": "forge",
+      "requirements": [
+        {
+          "item": "HardAntler",
+          "amount": 1
+        },
+        {
+          "item": "Flint",
+          "amount": 5
+        },
+        {
+          "item": "RoundLog",
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "name": "Recipe_RepairKitIron",
+      "item": "RepairKitIron",
+      "amount": 5,
+      "craftingStation": "forge",
+      "requirements": [
+        {
+          "item": "Iron",
+          "amount": 1
+        },
+        {
+          "item": "WitheredBone",
+          "amount": 3
+        },
+        {
+          "item": "ElderBark",
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "name": "Recipe_RepairKitSilver",
+      "item": "RepairKitSilver",
+      "amount": 5,
+      "craftingStation": "forge",
+      "requirements": [
+        {
+          "item": "Silver",
+          "amount": 1
+        },
+        {
+          "item": "Crystal",
+          "amount": 1
+        },
+        {
+          "item": "Obsidian",
+          "amount": 5
+        }
+      ]
+    },
+    {
+      "name": "Recipe_RepairKitBlackMetal",
+      "item": "RepairKitBlackMetal",
+      "amount": 5,
+      "craftingStation": "forge",
+      "requirements": [
+        {
+          "item": "BlackMetal",
+          "amount": 2
+        },
+        {
+          "item": "Crystal",
+          "amount": 2
+        },
+        {
+          "item": "SerpentScale",
+          "amount": 2
+        },
+        {
+          "item": "SurtlingCore",
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "name": "Recipe_RepairKitAdvanced",
+      "item": "RepairKitAdvanced",
+      "amount": 3,
+      "craftingStation": "forge",
+      "requirements": [
+        {
+          "item": "Bronze",
+          "amount": 1
+        },
+        {
+          "item": "HardAntler",
+          "amount": 2
+        },
+        {
+          "item": "FineWood",
+          "amount": 3
+        },
+        {
+          "item": "SurtlingCore",
+          "amount": 2
+        }
+      ]
+    }
+  ]
+}
