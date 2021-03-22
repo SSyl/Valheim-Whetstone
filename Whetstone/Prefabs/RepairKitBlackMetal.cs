@@ -21,7 +21,7 @@ namespace Whetstone.Prefabs
             item.m_itemData.m_shared.m_name = "Black Metal Repair Kit";
             item.m_itemData.m_shared.m_description = "Repair kit with sharpening stone that can repair up to Black Metal quality tools.\n\nRestores " + Whetstone.repairAmount.Value.ToString("P0").Replace(" ", "") + " durability to your equipped tool or weapon.";
             item.m_itemData.m_dropPrefab = Prefab;
-            item.m_itemData.m_shared.m_weight = 2f;
+            item.m_itemData.m_shared.m_weight = 2.5f;
             item.m_itemData.m_shared.m_maxStackSize = 10;
             item.m_itemData.m_shared.m_variants = 1;
             item.m_itemData.m_shared.m_teleportable = true;

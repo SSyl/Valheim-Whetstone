@@ -32,10 +32,10 @@ namespace Whetstone
             modEnabled = Config.Bind("General", "Enabled", true, "Settings this to false disables all features of this mod.");
             repairAmount = Config.Bind("General", "RepairAmountPercentage", 0.25f, "This is the percentage (in decimal) of an item's durability that gets repared when using a Bronze/Iron/Silver/BlackMetal repair kit. Example: If you want 15% put 0.15");
             repairAmountAdvancedKit = Config.Bind("General", "AdvancedKitRepairPercentage", 0.05f, "This is the percentage (in decimal) of ALL broken item's durability repaired when using the Advanced Repair Kit. Example: If you want 15% put 0.15");
-            customJsonRecipes = Config.Bind("General", "CustomJsonRecipes", false, "Setting this to true will make the mod use custom recipes that you've defined in a seperate custom_recipes.json file. You must create this file yourself, otherwise this setting won't do anything.");
+            customJsonRecipes = Config.Bind("General", "CustomJsonRecipes", false, "Setting this to true will make the mod use custom recipes that you've defined in a seperate custom_recipes.json file.\nYou must create this file yourself, otherwise this setting won't do anything.");
             nexusID = Config.Bind("General", "NexusID", 651, "Nexus mod ID for update checker. Do not change this value.");
 
-            if (modEnabled.Value)
+            if (!modEnabled.Value)
                 return;
 
                 Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), "SSyl.Whetstone");
