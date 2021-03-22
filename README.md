@@ -12,20 +12,20 @@ By default, the tiered repair kits repair 25% durability and the Advanced Repair
 
 ## Added recipes
 
-**Bronze Repair Kit (x5):** 1 Hard antler, 5 Flint, 3 Core Wood. 
-***Can repair up to Bronze-Tier weapons and tools***
+**Bronze Repair Kit (x5):** 1 Hard antler, 5 Flint, 3 Core Wood
+***Can repair up to Bronze-Tier weapons and tools.***
 
-**Iron Repair Kit (x5):** 1 Iron, 3 Withered bone, 2 Ancient Bark 
-***Can repair up to Iron tier and below***
+**Iron Repair Kit (x5):** 1 Iron, 3 Withered bone, 2 Ancient Bark
+***Can repair up to Iron tier and below.***
 
-**Silver Repair Kit (x5):** 1 Silver, 1 Crystal, 5 Obsidian 
-***Can repair up to Silver tier and below***
+**Silver Repair Kit (x5):** 1 Silver, 1 Crystal, 5 Obsidian
+***Can repair up to Silver tier and below.***
 
-**Black Metal Repair Kit (x5):** 2 Black Metal, 2 Crsytal, 2 Serpent Scale, 2 Surtling Core 
-***Can repair up to Black Metal tier and below***
+**Black Metal Repair Kit (x5):** 2 Black Metal, 2 Crystal, 2 Serpent Scale, 2 Surtling Core
+***Can repair up to Black Metal tier and below.***
 
-**Advanced Repair Kit:** 1 Bronze, 2 Hard Antler, 3 Fine Wood, 2 Surtling Core
-***Repairs all broken weapons and tools in your inventory, allowing you to equip it and repair it with a standard repair kit***
+**Advanced Repair Kit (x3):** 1 Bronze, 2 Hard Antler, 3 Fine Wood, 2 Surtling Core
+***Repairs all broken weapons and tools in your inventory, allowing you to equip it and repair it with a standard repair kit.***
 
 ## Frequently Asked Questions
 **How do I repair my items?** You repair items by first equipping them and then using one of the standard repair kits.
@@ -35,7 +35,7 @@ By default, the tiered repair kits repair 25% durability and the Advanced Repair
 **The repair kits repair too little/too much** You can change how much repair kits repair in the config file. It's percentage based and uses a decimal, so if you wanted to say, make it repair 35% of an item's total durability, you'd put 0.35 in the config file.
 
 ## Extra Information
-Eventually I'd like to add a "repair" tab to your personal crafting window (when you press tab) which will allow you to individually repair items using repair kits. However, since I'm only a hobbiest coder I couldn't figure out how to do that. That's why it only repairs your currently equipped weapon/tool rather than manually selecting what to repair through a GUI. That said, I did extensive testing and it works well. If you do find any bugs, please let me know.
+Eventually I'd like to add a "repair" tab to your personal crafting window (when you press tab) which will allow you to individually repair items using repair kits. However, since I'm only a hobbyist coder I couldn't figure out how to do that. That's why it only repairs your currently equipped weapon/tool rather than manually selecting what to repair through a GUI. That said, I did extensive testing and it works well. If you do find any bugs, please let me know.
 
 ## Installation
 
@@ -56,4 +56,4 @@ Eventually I'd like to add a "repair" tab to your personal crafting window (when
 
 ### Sources
 * Source: https://github.com/SSyl/Whetstone
-* NexusMods: https://www.nexusmods.com/valheim/mods/
+* NexusMods: https://www.nexusmods.com/valheim/mods/651
