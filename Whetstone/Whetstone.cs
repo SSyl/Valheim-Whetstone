@@ -13,7 +13,7 @@ using BepInEx.Configuration;
 
 namespace Whetstone
 {
-    [BepInPlugin("SSyl.Whetstone", "Whetstone", "1.0.0")]
+    [BepInPlugin("SSyl.Whetstone", "Whetstone", "1.1.0")]
     [BepInDependency("com.bepinex.plugins.jotunnlib")]
     public class Whetstone : BaseUnityPlugin
     {
@@ -22,21 +22,25 @@ namespace Whetstone
         public static ConfigEntry<bool> modEnabled;
         public static ConfigEntry<float> repairAmount;
         public static ConfigEntry<float> repairAmountAdvancedKit;
+        public static ConfigEntry<bool> customJsonRecipes;
+        public static ConfigEntry<int> nexusID;
 
         private void Awake()
         {
             logger = Logger;
 
             modEnabled = Config.Bind("General", "Enabled", true, "Settings this to false disables all features of this mod.");
-            repairAmount = Config.Bind("General", "repairAmountPercentage", 0.25f, "This is the percentage (in decimal) of an item's durability that gets repared when using a Bronze/Iron/Silver/BlackMetal repair kit. Example: If you want 15% put 0.15");
-            repairAmountAdvancedKit = Config.Bind("General", "repairAmountAdvancedKit", 0.05f, "This is the percentage (in decimal) of ALL broken item's durability repaired when using the Advanced Repair Kit. Example: If you want 15% put 0.15");
+            repairAmount = Config.Bind("General", "RepairAmountPercentage", 0.25f, "This is the percentage (in decimal) of an item's durability that gets repared when using a Bronze/Iron/Silver/BlackMetal repair kit. Example: If you want 15% put 0.15");
+            repairAmountAdvancedKit = Config.Bind("General", "AdvancedKitRepairPercentage", 0.05f, "This is the percentage (in decimal) of ALL broken item's durability repaired when using the Advanced Repair Kit. Example: If you want 15% put 0.15");
+            customJsonRecipes = Config.Bind("General", "CustomJsonRecipes", false, "Setting this to true will make the mod use custom recipes that you've defined in a seperate custom_recipes.json file. You must create this file yourself, otherwise this setting won't do anything.");
+            nexusID = Config.Bind("General", "NexusID", 651, "Nexus mod ID for update checker. Do not change this value.");
 
             if (modEnabled.Value)
-            {
+                return;
+
                 Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), "SSyl.Whetstone");
                 ObjectManager.Instance.ObjectRegister += registerObjects;
                 PrefabManager.Instance.PrefabRegister += registerPrefabs;
-            }
         }
         private void registerPrefabs(object sender, EventArgs e)
         {
@@ -62,7 +66,13 @@ namespace Whetstone
                 ObjectManager.Instance.RegisterItem(item);
             }
 
-            string jsonString = File.ReadAllText(Path.Combine(Paths.PluginPath, "Whetstone", "recipes.json"));
+            string recipesFileName = "recipes.json";
+            if(customJsonRecipes.Value == true && File.Exists(Path.Combine(Paths.PluginPath, "Whetstone", "custom_recipes.json")))
+            {
+                recipesFileName = "custom_recipes.json";
+            }
+
+            string jsonString = File.ReadAllText(Path.Combine(Paths.PluginPath, "Whetstone", recipesFileName));
             RecipeList recipeList = LitJson.JsonMapper.ToObject<RecipeList>(jsonString);
 
             if (recipeList != null)
